@@ -2,11 +2,11 @@
 
 ## Introduction
 
-Anterior Chamber Angle Dataset (ACA dataset) is stored in Hierarchical Data Format (h5) format. The data stored in h5 is not the original image. They have undergone simple preprocessing, such as using YoLo detection to crop out the critical area, and uniformly changing the size of the image to $700\times2100$. 
+Anterior Chamber Angle Dataset (ACA dataset) is stored in Hierarchical Data Format (h5) format. They have undergone simple preprocessing, such as using YoLo detection to crop out the critical area, and uniformly changing the size of the image to $700\times2100$.
 
-The dataset includes 3 diffent groups: (1) group 1 is training data, corresponding image-level labels and pixel-level labels; (2) group 2 is testing data, corresponding image-level labels and pixel-level labels; (3) group 3 is the index of image and the corresponding pixel-level labels, because only part of the image has pixel-level labels.
+The dataset includes 3 different groups: (1) group 1 is training data including image-level labels and pixel-level labels; (2) group 2 is testing data including image-level labels and pixel-level labels; (3) group 3 is the index of images and the corresponding pixel-level labels, because only a part of the image has pixel-level labels.
 
-Note that the preprocess_img in group 'test' is the pre-processing testing sample of our trained GCNet. If wanting to test the performance of our model, you just need to convert the data to tensor format: [bs, c, h, w].
+Note that the preprocess_img in group 'test' is the pre-processed testing samples of our trained GCNet. If you want to test the performance of our model, you just need to convert the data to tensor format: [bs, c, h, w].
 
 Below is the structure diagram of the h5 file, where label denote image-level label and mask denote pixel-level labels:
 
